@@ -105,7 +105,7 @@ convention (Day 001–021).
 
 ## Data sources / APIs
 
-- **Google Generative AI, direct** (`@ai-sdk/google`, model `gemini-pro-latest`)
+- **Google Generative AI, direct** (`@ai-sdk/google`, model `gemini-flash-latest`)
   — the one live dependency. **Amended from the original plan of routing through
   the Vercel AI Gateway**: AI Gateway requires a credit card on file to service
   any request, even against its free monthly credits, and the user declined to
@@ -113,7 +113,9 @@ convention (Day 001–021).
   (https://aistudio.google.com/apikey) with a real free tier and no card
   required, so generation is wired straight to Google instead — same "one real
   LLM call, structured output, checked for groundedness" design, different
-  provider. Used in two places:
+  provider. Model is the Flash tier specifically: the free-tier key's Pro-tier
+  quota is 0 requests (confirmed by a live 429 against `gemini-3.1-pro` before
+  switching), while Flash carries real free-tier quota. Used in two places:
   1. `scripts/generate-corpus.mts` — one-time, local, generates the committed
      follow-up corpus. Needs `GOOGLE_GENERATIVE_AI_API_KEY` locally when run.
   2. `app/api/generate` (Try It Yourself) — live, per-request. Needs the same
@@ -435,10 +437,11 @@ Recap of the grilling session that produced this plan, for traceability:
 - Real LLM call for generation — the first day in the series to break the
   zero-live-dependency streak, deliberately, because "grounded generation" is
   the point of the brief. Originally scoped as Vercel AI Gateway with a
-  Sonnet-class model; amended mid-build to Google's `gemini-pro-latest` via
+  Sonnet-class model; amended mid-build to Google's `gemini-flash-latest` via
   the direct `@ai-sdk/google` provider, because AI Gateway requires a credit
   card on file even for free-tier usage and the user opted for Google AI
-  Studio's card-free free tier instead (see § Data sources / APIs).
+  Studio's card-free free tier instead — whose free quota only covers the
+  Flash tier, not Pro (see § Data sources / APIs).
 - Standalone synthetic corpus, no cross-repo import from Day 021.
 - Output = follow-up draft + separate structured next-step summary (both named
   explicitly in the brief).

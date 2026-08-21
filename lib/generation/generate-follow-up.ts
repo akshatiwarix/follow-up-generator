@@ -9,10 +9,11 @@ import { buildPrompt } from "./prompt";
  * free monthly credits, which this build deliberately avoids). Needs
  * GOOGLE_GENERATIVE_AI_API_KEY in the environment, a free key from
  * https://aistudio.google.com/apikey — see PLAN.md § Deployment plan.
+ * Flash tier specifically: the free-tier key's Pro-tier quota is 0 requests.
  * Called from scripts/generate-corpus.mts (once, at corpus-build time) and
  * from app/api/generate (live, for Try It Yourself).
  */
-export const GENERATION_MODEL_ID = "gemini-pro-latest";
+export const GENERATION_MODEL_ID = "gemini-flash-latest";
 
 export async function generateFollowUp(context: MeetingContext): Promise<GeneratedFollowUp> {
   const { output } = await generateText({
