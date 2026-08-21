@@ -24,3 +24,9 @@ export const corpusGroundednessSchema = z.object({
   ambiguous: z.number(),
 });
 export type CorpusGroundedness = z.infer<typeof corpusGroundednessSchema>;
+
+export const followUpsResponseSchema = z.object({
+  entries: z.array(followUpResultSchema),
+  groundedness: corpusGroundednessSchema,
+});
+export type FollowUpsResponse = z.infer<typeof followUpsResponseSchema>;

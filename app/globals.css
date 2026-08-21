@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
+/*
+ * Follow-Up Generator palette: cool paper/ink base, plus a groundedness
+ * scale used identically everywhere a score appears (table badges, detail
+ * page header, the corpus groundedness panel). High reads as trustworthy;
+ * medium as worth a skim; low as flagged, not hidden.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --paper: #f2f4f7;
+  --paper-raised: #ffffff;
+  --ink: #12151b;
+  --ink-dim: #5b6472;
+  --line: #d9dee5;
+  --line-strong: #aab2c0;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --ground-high: #2f6f4f;
+  --ground-high-dim: #d7ecdf;
+  --ground-medium: #a3721f;
+  --ground-medium-dim: #f3e3c2;
+  --ground-low: #a33a34;
+  --ground-low-dim: #f3d6d3;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --paper: #10131a;
+    --paper-raised: #191d26;
+    --ink: #eef0f4;
+    --ink-dim: #99a2b2;
+    --line: #2a2f3b;
+    --line-strong: #3e4657;
+
+    --ground-high: #74c298;
+    --ground-high-dim: #1e3427;
+    --ground-medium: #d9a94a;
+    --ground-medium-dim: #3a2c12;
+    --ground-low: #e0776d;
+    --ground-low-dim: #3a1d1a;
   }
 }
 
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ground-high: var(--ground-high);
+  --color-ground-high-dim: var(--ground-high-dim);
+  --color-ground-medium: var(--ground-medium);
+  --color-ground-medium-dim: var(--ground-medium-dim);
+  --color-ground-low: var(--ground-low);
+  --color-ground-low-dim: var(--ground-low-dim);
+  --font-display: var(--font-lora);
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+* {
+  border-color: var(--line);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
 }
