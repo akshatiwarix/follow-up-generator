@@ -99,19 +99,25 @@ actually backed by those notes — not smoothed-over LLM confidence.
 Next.js (App Router) + React + TypeScript strict (`noUncheckedIndexedAccess`),
 Tailwind CSS 4, zod at every boundary (API output, corpus load, LLM structured
 output), vitest + vite-node for tests/scripts, deployed on Vercel. **One dependency
-exception to the series' zero-live-dependency streak:** Vercel AI SDK + AI Gateway,
-used to make real model calls. Everything else about the stack matches the
-established series convention (Day 001–021).
+exception to the series' zero-live-dependency streak:** the AI SDK, used to make
+real model calls. Everything else about the stack matches the established series
+convention (Day 001–021).
 
 ## Data sources / APIs
 
-- **Vercel AI Gateway** (via `ai` / `@ai-sdk/gateway`, plain `"anthropic/claude-..."`
-  model string) — the one live dependency. Used in two places:
+- **Google Generative AI, direct** (`@ai-sdk/google`, model `gemini-pro-latest`)
+  — the one live dependency. **Amended from the original plan of routing through
+  the Vercel AI Gateway**: AI Gateway requires a credit card on file to service
+  any request, even against its free monthly credits, and the user declined to
+  add one. Google AI Studio issues a free API key
+  (https://aistudio.google.com/apikey) with a real free tier and no card
+  required, so generation is wired straight to Google instead — same "one real
+  LLM call, structured output, checked for groundedness" design, different
+  provider. Used in two places:
   1. `scripts/generate-corpus.mts` — one-time, local, generates the committed
-     follow-up corpus. Needs an AI Gateway credential locally when run.
-  2. `app/api/generate` (Try It Yourself) — live, per-request. Authenticates via
-     Vercel OIDC automatically once deployed on Vercel; no manual key needed in
-     production.
+     follow-up corpus. Needs `GOOGLE_GENERATIVE_AI_API_KEY` locally when run.
+  2. `app/api/generate` (Try It Yourself) — live, per-request. Needs the same
+     key set as a Vercel environment variable in production.
 - No other external APIs. No database — corpus is a committed JSON file, same
   pattern as every prior day.
 
@@ -250,8 +256,9 @@ structured output at generation time and the committed corpus at load time.
 ### Generation (`lib/generation/`)
 
 - One AI SDK call per `MeetingContext`, using structured output
-  (`generateObject`) against the `GeneratedFollowUp` zod schema — the model
-  cannot return free text, only the typed shape.
+  (`generateText` with `output: Output.object({ schema })`, the AI SDK's
+  current structured-output API) against the `GeneratedFollowUp` zod schema —
+  the model cannot return free text, only the typed shape.
 - Prompt instructs: (1) write a short external, prospect-facing follow-up email as
   an ordered list of lines, (2) attach a citation (`field` + `value`) to every line
   that asserts a specific fact, leave `citation: null` only for connective lines
@@ -328,8 +335,9 @@ structured output at generation time and the committed corpus at load time.
     in step 5), generation-output schema validation, full read-path.
 12. `README.md`, `docs/plain-english-guide.md`, screenshots, `CLAUDE.md`.
 13. `git init`, GitHub repo, first + incremental commits/pushes per step.
-14. Vercel project link + deploy; confirm AI Gateway auth works in production
-    (OIDC, no manual key) and Try It Yourself works live on the deployed URL.
+14. Vercel project link + deploy; set `GOOGLE_GENERATIVE_AI_API_KEY` as a
+    production environment variable and confirm Try It Yourself works live on
+    the deployed URL.
 
 ---
 
@@ -372,13 +380,14 @@ char cap and in-flight lock, and an unknown id 404s properly.
 ## Deployment plan
 
 1. `gh repo create akshatiwarix/follow-up-generator --public --source=. ` (public,
-   matching every prior day).
-2. `vercel link` to a new Vercel project under the existing Vercel account.
-3. Provision AI Gateway on the linked project (Vercel dashboard/CLI) so
-   production requests authenticate via OIDC with no manual secret required.
-4. For the one-time local `scripts/generate-corpus.mts` run: obtain a local AI
-   Gateway credential (`vercel env pull` after linking, or a Gateway API key from
-   the Vercel dashboard) — used only at corpus-build time, never committed.
+   matching every prior day). ✅
+2. `vercel link` to a new Vercel project under the existing Vercel account,
+   connected to the GitHub repo for auto-deploys. ✅
+3. Free Google AI Studio API key (https://aistudio.google.com/apikey), set as
+   `GOOGLE_GENERATIVE_AI_API_KEY` locally (`.env.local`, gitignored) and as a
+   Vercel project environment variable for production.
+4. Run `scripts/generate-corpus.mts` locally with that key set, producing and
+   committing `data/follow-up-corpus.json`.
 5. `vercel deploy --prod` once the corpus is committed and the app builds clean.
 
 ---
@@ -423,9 +432,13 @@ screenshots — mirroring how Day 021's README proved its accuracy claim.
 
 Recap of the grilling session that produced this plan, for traceability:
 
-- Real LLM call (Vercel AI Gateway, Sonnet-class model) for generation — the
-  first day in the series to break the zero-live-dependency streak, deliberately,
-  because "grounded generation" is the point of the brief.
+- Real LLM call for generation — the first day in the series to break the
+  zero-live-dependency streak, deliberately, because "grounded generation" is
+  the point of the brief. Originally scoped as Vercel AI Gateway with a
+  Sonnet-class model; amended mid-build to Google's `gemini-pro-latest` via
+  the direct `@ai-sdk/google` provider, because AI Gateway requires a credit
+  card on file even for free-tier usage and the user opted for Google AI
+  Studio's card-free free tier instead (see § Data sources / APIs).
 - Standalone synthetic corpus, no cross-repo import from Day 021.
 - Output = follow-up draft + separate structured next-step summary (both named
   explicitly in the brief).

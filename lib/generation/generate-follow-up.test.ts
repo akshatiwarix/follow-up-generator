@@ -8,7 +8,7 @@ vi.mock("ai", () => ({
   Output: { object: (config: unknown) => config },
 }));
 
-const { generateFollowUp, GENERATION_MODEL } = await import("./generate-follow-up");
+const { generateFollowUp, GENERATION_MODEL_ID } = await import("./generate-follow-up");
 
 const context: MeetingContext = {
   id: "m-fixture",
@@ -26,7 +26,7 @@ const context: MeetingContext = {
 };
 
 describe("generateFollowUp", () => {
-  it("calls the AI SDK with the gateway model string and a context-specific prompt, returning its output", async () => {
+  it("calls the AI SDK with the Google model and a context-specific prompt, returning its output", async () => {
     const fakeFollowUp: GeneratedFollowUp = {
       subject: "Following up",
       draftLines: [{ text: "Thanks for the time today.", citation: null }],
@@ -39,8 +39,8 @@ describe("generateFollowUp", () => {
     expect(result).toEqual(fakeFollowUp);
     expect(generateTextMock).toHaveBeenCalledTimes(1);
 
-    const callArgs = generateTextMock.mock.calls[0]?.[0] as { model: string; prompt: string };
-    expect(callArgs.model).toBe(GENERATION_MODEL);
+    const callArgs = generateTextMock.mock.calls[0]?.[0] as { model: { modelId: string }; prompt: string };
+    expect(callArgs.model.modelId).toBe(GENERATION_MODEL_ID);
     expect(callArgs.prompt).toContain("Acme Corp");
   });
 });
