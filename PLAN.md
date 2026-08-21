@@ -392,10 +392,13 @@ char cap and in-flight lock, and an unknown id 404s properly.
    connected to the GitHub repo for auto-deploys. ✅
 3. Free Google AI Studio API key (https://aistudio.google.com/apikey), set as
    `GOOGLE_GENERATIVE_AI_API_KEY` locally (`.env.local`, gitignored) and as a
-   Vercel project environment variable for production.
+   Vercel project environment variable for production. ✅
 4. Run `scripts/generate-corpus.mts` locally with that key set, producing and
-   committing `data/follow-up-corpus.json`.
-5. `vercel deploy --prod` once the corpus is committed and the app builds clean.
+   committing `data/follow-up-corpus.json`. ✅
+5. `vercel deploy --prod` once the corpus is committed and the app builds clean. ✅
+   Live at https://follow-up-generator-eight.vercel.app — `/`, `/follow-ups/[id]`,
+   `/try-it`, and `/api/generate` all verified working in production, including
+   one real end-to-end live generation.
 
 ---
 

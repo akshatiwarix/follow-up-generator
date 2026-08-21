@@ -4,9 +4,10 @@ A workflow that turns meeting context into a grounded follow-up draft and next-s
 summary — an LLM writes it, a separate deterministic grader checks whether every
 claim actually traces back to the meeting.
 
-[Live demo](#) · [Plain-English guide](docs/plain-english-guide.md) ·
-[`GET /api/v1/follow-ups`](#) · [Plan](./PLAN.md) · Day 023 of a 100-day building
-challenge
+**[Live demo](https://follow-up-generator-eight.vercel.app)** ·
+[Plain-English guide](docs/plain-english-guide.md) ·
+[`GET /api/v1/follow-ups`](https://follow-up-generator-eight.vercel.app/api/v1/follow-ups) ·
+[Plan](./PLAN.md) · Day 023 of a 100-day building challenge
 
 ![Follow-Up Library: a groundedness panel showing 82 overall / 83.3 clean / 79.9 ambiguous, above a sortable table of 20 meetings with stage, ambiguity kind, and groundedness columns](docs/screenshot-hero.png)
 
