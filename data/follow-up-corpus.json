@@ -1,0 +1,3029 @@
+[
+  {
+    "context": {
+      "id": "m-001",
+      "company": "Meridian Logistics",
+      "industry": "medical devices",
+      "dealStage": "proposal",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Aisha Bello",
+          "role": "COO",
+          "isNamed": true
+        },
+        {
+          "name": "Priya Patel",
+          "role": "COO",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "lack of real-time visibility",
+        "frequent stockouts"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "share the SOC 2 report",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "get sign-off from legal",
+          "isVague": false
+        },
+        {
+          "by": "rep",
+          "text": "loop in our solutions engineer",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "whether the security review is already underway",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": false,
+        "timeframe": null
+      },
+      "ambiguous": true,
+      "ambiguityKind": "missing_next_meeting"
+    },
+    "followUp": {
+      "subject": "Follow-up & Next Steps: Meridian Logistics",
+      "draftLines": [
+        {
+          "text": "Hi Aisha and Priya,",
+          "citation": null
+        },
+        {
+          "text": "Thank you for taking the time to speak today regarding Meridian Logistics.",
+          "citation": {
+            "field": "company",
+            "value": "Meridian Logistics"
+          }
+        },
+        {
+          "text": "We discussed your focus on resolving issues around lack of real-time visibility.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "lack of real-time visibility"
+          }
+        },
+        {
+          "text": "We also covered your goal to eliminate frequent stockouts.",
+          "citation": {
+            "field": "painPoints.1",
+            "value": "frequent stockouts"
+          }
+        },
+        {
+          "text": "From our end, I will share the SOC 2 report.",
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "share the SOC 2 report"
+          }
+        },
+        {
+          "text": "I will also loop in our solutions engineer.",
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "loop in our solutions engineer"
+          }
+        },
+        {
+          "text": "On your side, you noted you will get sign-off from legal.",
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "get sign-off from legal"
+          }
+        },
+        {
+          "text": "Could you also confirm whether the security review is already underway?",
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "whether the security review is already underway"
+          }
+        },
+        {
+          "text": "We did not confirm a timeframe for our next meeting, so please let me know your availability.",
+          "citation": null
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Share the SOC 2 report",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "share the SOC 2 report"
+          }
+        },
+        {
+          "text": "Loop in our solutions engineer",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "loop in our solutions engineer"
+          }
+        },
+        {
+          "text": "Get sign-off from legal",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "get sign-off from legal"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.7,
+      "citationAccuracy": 1,
+      "groundednessScore": 70,
+      "ungroundedLines": [
+        0,
+        8,
+        9
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-002",
+      "company": "Northwind Robotics",
+      "industry": "media",
+      "dealStage": "discovery",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Lena Kowalski",
+          "role": "VP Operations",
+          "isNamed": true
+        },
+        {
+          "name": "Aisha Bello",
+          "role": "Director of Procurement",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "long invoice reconciliation cycles"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "circle back at some point",
+          "isVague": true
+        },
+        {
+          "by": "prospect",
+          "text": "confirm which regions need coverage",
+          "isVague": false
+        },
+        {
+          "by": "rep",
+          "text": "follow up with a custom demo",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "whether the security review is already underway",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "the following Monday"
+      },
+      "ambiguous": true,
+      "ambiguityKind": "vague_commitment"
+    },
+    "followUp": {
+      "subject": "Follow-up: Northwind Robotics Discussion & Next Steps",
+      "draftLines": [
+        {
+          "text": "Hi Lena and Aisha,",
+          "citation": null
+        },
+        {
+          "text": "Thank you for taking the time to speak with us today regarding Northwind Robotics.",
+          "citation": {
+            "field": "company",
+            "value": "Northwind Robotics"
+          }
+        },
+        {
+          "text": "We noted your current challenge around long invoice reconciliation cycles.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "long invoice reconciliation cycles"
+          }
+        },
+        {
+          "text": "As discussed, our team will follow up with a custom demo.",
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "follow up with a custom demo"
+          }
+        },
+        {
+          "text": "On your side, you will confirm which regions need coverage.",
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "confirm which regions need coverage"
+          }
+        },
+        {
+          "text": "We also left open whether the security review is already underway.",
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "whether the security review is already underway"
+          }
+        },
+        {
+          "text": "We look forward to our next confirmed meeting on the following Monday.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "the following Monday"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Follow up with a custom demo",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "follow up with a custom demo"
+          }
+        },
+        {
+          "text": "Confirm which regions need coverage",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "confirm which regions need coverage"
+          }
+        },
+        {
+          "text": "Hold scheduled next meeting",
+          "owner": "unassigned",
+          "dueHint": "the following Monday",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "the following Monday"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.75,
+      "citationAccuracy": 1,
+      "groundednessScore": 75,
+      "ungroundedLines": [
+        0,
+        7
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-003",
+      "company": "Bluepeak Analytics",
+      "industry": "food & beverage",
+      "dealStage": "proposal",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Farid Hassan",
+          "role": "VP Operations",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "duplicate data entry across tools"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "set up a sandbox environment",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "confirm which regions need coverage",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "who owns final budget approval",
+          "resolved": false
+        },
+        {
+          "text": "not sure the team has bandwidth this quarter",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "next Thursday afternoon"
+      },
+      "ambiguous": true,
+      "ambiguityKind": "unresolved_objection"
+    },
+    "followUp": {
+      "subject": "Follow-up: Bluepeak Analytics Discussion",
+      "draftLines": [
+        {
+          "text": "Hi Farid Hassan,",
+          "citation": {
+            "field": "contacts.0.name",
+            "value": "Farid Hassan"
+          }
+        },
+        {
+          "text": "Thank you for taking the time to speak today.",
+          "citation": null
+        },
+        {
+          "text": "I enjoyed our discussion regarding Bluepeak Analytics.",
+          "citation": {
+            "field": "company",
+            "value": "Bluepeak Analytics"
+          }
+        },
+        {
+          "text": "We discussed addressing duplicate data entry across tools.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "duplicate data entry across tools"
+          }
+        },
+        {
+          "text": "I will set up a sandbox environment for you.",
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "set up a sandbox environment"
+          }
+        },
+        {
+          "text": "Please let me know once you confirm which regions need coverage.",
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "confirm which regions need coverage"
+          }
+        },
+        {
+          "text": "I look forward to our follow-up meeting scheduled for next Thursday afternoon.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "next Thursday afternoon"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Set up a sandbox environment",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "set up a sandbox environment"
+          }
+        },
+        {
+          "text": "Confirm which regions need coverage",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "confirm which regions need coverage"
+          }
+        },
+        {
+          "text": "Reconvene for next meeting",
+          "owner": "unassigned",
+          "dueHint": "next Thursday afternoon",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "next Thursday afternoon"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.75,
+      "citationAccuracy": 1,
+      "groundednessScore": 75,
+      "ungroundedLines": [
+        1,
+        7
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-004",
+      "company": "Cascade Foods",
+      "industry": "medical devices",
+      "dealStage": "closed_won",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Grace Kim",
+          "role": "Procurement Manager",
+          "isNamed": true
+        },
+        {
+          "name": null,
+          "role": "someone from it",
+          "isNamed": false
+        }
+      ],
+      "painPoints": [
+        "lack of real-time visibility",
+        "duplicate data entry across tools"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "share the SOC 2 report",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "get sign-off from legal",
+          "isVague": false
+        },
+        {
+          "by": "rep",
+          "text": "share the SOC 2 report",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "early next month"
+      },
+      "ambiguous": true,
+      "ambiguityKind": "unnamed_stakeholder"
+    },
+    "followUp": {
+      "subject": "Follow-up and Next Steps - Cascade Foods",
+      "draftLines": [
+        {
+          "text": "Hi Grace Kim,",
+          "citation": {
+            "field": "contacts.0.name",
+            "value": "Grace Kim"
+          }
+        },
+        {
+          "text": "Thank you for taking the time to speak today regarding Cascade Foods.",
+          "citation": {
+            "field": "company",
+            "value": "Cascade Foods"
+          }
+        },
+        {
+          "text": "We discussed your team's challenges around lack of real-time visibility.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "lack of real-time visibility"
+          }
+        },
+        {
+          "text": "We also covered concerns regarding duplicate data entry across tools.",
+          "citation": {
+            "field": "painPoints.1",
+            "value": "duplicate data entry across tools"
+          }
+        },
+        {
+          "text": "As promised, I will share the SOC 2 report.",
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "share the SOC 2 report"
+          }
+        },
+        {
+          "text": "You mentioned that you will get sign-off from legal.",
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "get sign-off from legal"
+          }
+        },
+        {
+          "text": "We are scheduled to connect again early next month.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "early next month"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Share the SOC 2 report",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "share the SOC 2 report"
+          }
+        },
+        {
+          "text": "Get sign-off from legal",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "get sign-off from legal"
+          }
+        },
+        {
+          "text": "Hold next meeting",
+          "owner": "unassigned",
+          "dueHint": "early next month",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "early next month"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.875,
+      "citationAccuracy": 1,
+      "groundednessScore": 88,
+      "ungroundedLines": [
+        7
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-005",
+      "company": "Ironclad Security",
+      "industry": "insurance",
+      "dealStage": "proposal",
+      "stageSignalsConflict": true,
+      "contacts": [
+        {
+          "name": "Sam O'Connor",
+          "role": "VP Sales",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "slow incident response times",
+        "disconnected sales and success teams",
+        "slow customer onboarding"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "set up a sandbox environment",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "loop in the budget owner",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "what a phased rollout would look like",
+          "resolved": false
+        },
+        {
+          "text": "who owns final budget approval",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "the following Monday"
+      },
+      "ambiguous": true,
+      "ambiguityKind": "unclear_deal_stage"
+    },
+    "followUp": {
+      "subject": "Follow-up: Ironclad Security Discussion",
+      "draftLines": [
+        {
+          "text": "Hi Sam O'Connor,",
+          "citation": {
+            "field": "contacts.0.name",
+            "value": "Sam O'Connor"
+          }
+        },
+        {
+          "text": "Thank you for taking the time to speak with me today.",
+          "citation": null
+        },
+        {
+          "text": "I enjoyed learning more about Ironclad Security.",
+          "citation": {
+            "field": "company",
+            "value": "Ironclad Security"
+          }
+        },
+        {
+          "text": "We discussed your challenges with slow incident response times.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "slow incident response times"
+          }
+        },
+        {
+          "text": "We also covered issues around disconnected sales and success teams.",
+          "citation": {
+            "field": "painPoints.1",
+            "value": "disconnected sales and success teams"
+          }
+        },
+        {
+          "text": "In addition, you noted friction from slow customer onboarding.",
+          "citation": {
+            "field": "painPoints.2",
+            "value": "slow customer onboarding"
+          }
+        },
+        {
+          "text": "As discussed, I will set up a sandbox environment.",
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "set up a sandbox environment"
+          }
+        },
+        {
+          "text": "On your side, you will loop in the budget owner.",
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "loop in the budget owner"
+          }
+        },
+        {
+          "text": "We are scheduled to connect again the following Monday.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "the following Monday"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Set up a sandbox environment",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "set up a sandbox environment"
+          }
+        },
+        {
+          "text": "Loop in the budget owner",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "loop in the budget owner"
+          }
+        },
+        {
+          "text": "Hold next meeting",
+          "owner": "unassigned",
+          "dueHint": "the following Monday",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "the following Monday"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.8,
+      "citationAccuracy": 1,
+      "groundednessScore": 80,
+      "ungroundedLines": [
+        1,
+        9
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-006",
+      "company": "Solstice Health",
+      "industry": "energy",
+      "dealStage": "qualification",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Ben Whitfield",
+          "role": "VP Sales",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "duplicate data entry across tools"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "follow up with a custom demo",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "share their current vendor contract end date",
+          "isVague": false
+        },
+        {
+          "by": "rep",
+          "text": "share the SOC 2 report",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "whether legal needs a redline pass on the MSA",
+          "resolved": false
+        },
+        {
+          "text": "what a phased rollout would look like",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": false,
+        "timeframe": null
+      },
+      "ambiguous": true,
+      "ambiguityKind": "missing_next_meeting"
+    },
+    "followUp": {
+      "subject": "Solstice Health - Follow-up and Next Steps",
+      "draftLines": [
+        {
+          "text": "Hi Ben,",
+          "citation": {
+            "field": "contacts.0.name",
+            "value": "Ben"
+          }
+        },
+        {
+          "text": "Thank you for taking the time to speak today about Solstice Health.",
+          "citation": {
+            "field": "company",
+            "value": "Solstice Health"
+          }
+        },
+        {
+          "text": "I noted that your team is currently facing challenges with duplicate data entry across tools.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "duplicate data entry across tools"
+          }
+        },
+        {
+          "text": "As agreed, I will follow up with a custom demo.",
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "follow up with a custom demo"
+          }
+        },
+        {
+          "text": "I will also share the SOC 2 report with you.",
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "share the SOC 2 report"
+          }
+        },
+        {
+          "text": "Whenever convenient, please share your current vendor contract end date.",
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "share their current vendor contract end date"
+          }
+        },
+        {
+          "text": "We still need to clarify whether legal needs a redline pass on the MSA and what a phased rollout would look like.",
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "whether legal needs a redline pass on the MSA"
+          }
+        },
+        {
+          "text": "We do not have a confirmed date for our next meeting yet, so please let me know your availability for next week.",
+          "citation": {
+            "field": "nextMeeting.confirmed",
+            "value": "false"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Follow up with a custom demo",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "follow up with a custom demo"
+          }
+        },
+        {
+          "text": "Share the SOC 2 report",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "share the SOC 2 report"
+          }
+        },
+        {
+          "text": "Share current vendor contract end date",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "share their current vendor contract end date"
+          }
+        },
+        {
+          "text": "Confirm date and time for next meeting",
+          "owner": "unassigned",
+          "dueHint": null,
+          "citation": {
+            "field": "nextMeeting.confirmed",
+            "value": "false"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.8888888888888888,
+      "citationAccuracy": 1,
+      "groundednessScore": 89,
+      "ungroundedLines": [
+        8
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-007",
+      "company": "Vantage Freight",
+      "industry": "logistics",
+      "dealStage": "proposal",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Aisha Bello",
+          "role": "Head of IT",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "slow customer onboarding",
+        "data trapped in spreadsheets",
+        "frequent stockouts"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "circle back at some point",
+          "isVague": true
+        },
+        {
+          "by": "prospect",
+          "text": "confirm which regions need coverage",
+          "isVague": false
+        },
+        {
+          "by": "rep",
+          "text": "send updated pricing",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "what success looks like in the first 90 days",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "early next month"
+      },
+      "ambiguous": true,
+      "ambiguityKind": "vague_commitment"
+    },
+    "followUp": {
+      "subject": "Follow-up: Vantage Freight Next Steps",
+      "draftLines": [
+        {
+          "text": "Hi Aisha,",
+          "citation": null
+        },
+        {
+          "text": "Thank you for taking the time to speak today regarding Vantage Freight.",
+          "citation": {
+            "field": "company",
+            "value": "Vantage Freight"
+          }
+        },
+        {
+          "text": "We discussed your team's challenge with slow customer onboarding.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "slow customer onboarding"
+          }
+        },
+        {
+          "text": "We also covered issues around data trapped in spreadsheets.",
+          "citation": {
+            "field": "painPoints.1",
+            "value": "data trapped in spreadsheets"
+          }
+        },
+        {
+          "text": "Additionally, we noted that you are experiencing frequent stockouts.",
+          "citation": {
+            "field": "painPoints.2",
+            "value": "frequent stockouts"
+          }
+        },
+        {
+          "text": "As promised, I will send updated pricing.",
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "send updated pricing"
+          }
+        },
+        {
+          "text": "You mentioned you will confirm which regions need coverage.",
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "confirm which regions need coverage"
+          }
+        },
+        {
+          "text": "I noted that I will circle back at some point, though we have not set a specific date for that yet.",
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "circle back at some point"
+          }
+        },
+        {
+          "text": "We also still need to resolve what success looks like in the first 90 days.",
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "what success looks like in the first 90 days"
+          }
+        },
+        {
+          "text": "I look forward to our next meeting scheduled for early next month.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "early next month"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Send updated pricing",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "send updated pricing"
+          }
+        },
+        {
+          "text": "Confirm which regions need coverage",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "confirm which regions need coverage"
+          }
+        },
+        {
+          "text": "Circle back at some point",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "circle back at some point"
+          }
+        },
+        {
+          "text": "Define what success looks like in the first 90 days",
+          "owner": "unassigned",
+          "dueHint": null,
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "what success looks like in the first 90 days"
+          }
+        },
+        {
+          "text": "Hold next meeting",
+          "owner": "unassigned",
+          "dueHint": "early next month",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "early next month"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.8181818181818182,
+      "citationAccuracy": 1,
+      "groundednessScore": 82,
+      "ungroundedLines": [
+        0,
+        10
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-008",
+      "company": "Emberline Media",
+      "industry": "telecom",
+      "dealStage": "discovery",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Derek Novak",
+          "role": "Director of Procurement",
+          "isNamed": true
+        },
+        {
+          "name": "Farid Hassan",
+          "role": "Head of Security",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "disconnected sales and success teams",
+        "slow incident response times"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "send updated pricing",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "confirm which regions need coverage",
+          "isVague": false
+        },
+        {
+          "by": "rep",
+          "text": "draft a rollout timeline",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "what success looks like in the first 90 days",
+          "resolved": false
+        },
+        {
+          "text": "how this integrates with their existing stack",
+          "resolved": false
+        },
+        {
+          "text": "worried about the price relative to their current tool",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "in two weeks"
+      },
+      "ambiguous": true,
+      "ambiguityKind": "unresolved_objection"
+    },
+    "followUp": {
+      "subject": "Follow-up: Emberline Media Discovery Call",
+      "draftLines": [
+        {
+          "text": "Hi Derek and Farid,",
+          "citation": null
+        },
+        {
+          "text": "Thank you for taking the time to speak today regarding Emberline Media.",
+          "citation": {
+            "field": "company",
+            "value": "Emberline Media"
+          }
+        },
+        {
+          "text": "We discussed your current challenges around disconnected sales and success teams.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "disconnected sales and success teams"
+          }
+        },
+        {
+          "text": "We also noted your concerns regarding slow incident response times.",
+          "citation": {
+            "field": "painPoints.1",
+            "value": "slow incident response times"
+          }
+        },
+        {
+          "text": "As a next step on my end, I will send updated pricing.",
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "send updated pricing"
+          }
+        },
+        {
+          "text": "I will also draft a rollout timeline for your team.",
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "draft a rollout timeline"
+          }
+        },
+        {
+          "text": "From your side, you mentioned you would confirm which regions need coverage.",
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "confirm which regions need coverage"
+          }
+        },
+        {
+          "text": "We noted open questions to address, including what success looks like in the first 90 days.",
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "what success looks like in the first 90 days"
+          }
+        },
+        {
+          "text": "I look forward to continuing our conversation in two weeks.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "in two weeks"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Send updated pricing",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "send updated pricing"
+          }
+        },
+        {
+          "text": "Draft a rollout timeline",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "draft a rollout timeline"
+          }
+        },
+        {
+          "text": "Confirm which regions need coverage",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "confirm which regions need coverage"
+          }
+        },
+        {
+          "text": "Hold follow-up meeting",
+          "owner": "unassigned",
+          "dueHint": "in two weeks",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "in two weeks"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.8,
+      "citationAccuracy": 1,
+      "groundednessScore": 80,
+      "ungroundedLines": [
+        0,
+        9
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-009",
+      "company": "Corvus Manufacturing",
+      "industry": "construction",
+      "dealStage": "evaluation",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Sofia Alvarez",
+          "role": "Director of Finance",
+          "isNamed": true
+        },
+        {
+          "name": "Grace Kim",
+          "role": "VP Product",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "manual dispatch scheduling"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "send the security questionnaire answers",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "loop in the budget owner",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "what the rollout timeline looks like once signed",
+          "resolved": false
+        },
+        {
+          "text": "who owns final budget approval",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "in two weeks"
+      },
+      "ambiguous": false,
+      "ambiguityKind": null
+    },
+    "followUp": {
+      "subject": "Follow up: Corvus Manufacturing next steps",
+      "draftLines": [
+        {
+          "text": "Dear Sofia Alvarez and Grace Kim,",
+          "citation": {
+            "field": "contacts.0.name",
+            "value": "Sofia Alvarez"
+          }
+        },
+        {
+          "text": "Thank you for taking the time to discuss Corvus Manufacturing's operations today.",
+          "citation": {
+            "field": "company",
+            "value": "Corvus Manufacturing"
+          }
+        },
+        {
+          "text": "We spent some time talking about your current friction with manual dispatch scheduling.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "manual dispatch scheduling"
+          }
+        },
+        {
+          "text": "As we proceed with our evaluation,",
+          "citation": {
+            "field": "dealStage",
+            "value": "evaluation"
+          }
+        },
+        {
+          "text": "I will make sure to send the security questionnaire answers directly to you.",
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "send the security questionnaire answers"
+          }
+        },
+        {
+          "text": "Meanwhile, you plan to loop in the budget owner.",
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "loop in the budget owner"
+          }
+        },
+        {
+          "text": "Lastly, we scheduled our next meeting to occur in two weeks.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "in two weeks"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Send the security questionnaire answers",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "send the security questionnaire answers"
+          }
+        },
+        {
+          "text": "Loop in the budget owner",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "loop in the budget owner"
+          }
+        },
+        {
+          "text": "Determine what the rollout timeline looks like once signed",
+          "owner": "unassigned",
+          "dueHint": null,
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "what the rollout timeline looks like once signed"
+          }
+        },
+        {
+          "text": "Clarify who owns final budget approval",
+          "owner": "unassigned",
+          "dueHint": null,
+          "citation": {
+            "field": "openQuestions.1.text",
+            "value": "who owns final budget approval"
+          }
+        },
+        {
+          "text": "Attend our next meeting",
+          "owner": "unassigned",
+          "dueHint": "in two weeks",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "in two weeks"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.875,
+      "citationAccuracy": 1,
+      "groundednessScore": 88,
+      "ungroundedLines": [
+        7
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-010",
+      "company": "Tidewater Insurance",
+      "industry": "finance",
+      "dealStage": "closed_won",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Sofia Alvarez",
+          "role": "Head of Customer Success",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "disconnected sales and success teams",
+        "long invoice reconciliation cycles"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "loop in our solutions engineer",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "check with procurement on approved vendors",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "how this integrates with their existing stack",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "next Tuesday"
+      },
+      "ambiguous": false,
+      "ambiguityKind": null
+    },
+    "followUp": {
+      "subject": "Follow-up: Tidewater Insurance",
+      "draftLines": [
+        {
+          "text": "Hi Sofia,",
+          "citation": {
+            "field": "contacts.0.name",
+            "value": "Sofia Alvarez"
+          }
+        },
+        {
+          "text": "Thank you for taking the time to discuss Tidewater Insurance today.",
+          "citation": {
+            "field": "company",
+            "value": "Tidewater Insurance"
+          }
+        },
+        {
+          "text": "I appreciate you sharing more about the challenges you face with disconnected sales and success teams.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "disconnected sales and success teams"
+          }
+        },
+        {
+          "text": "We also discussed the impact of long invoice reconciliation cycles on your operations.",
+          "citation": {
+            "field": "painPoints.1",
+            "value": "long invoice reconciliation cycles"
+          }
+        },
+        {
+          "text": "Regarding our open discussion, we still need to address how this integrates with your existing stack.",
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "how this integrates with their existing stack"
+          }
+        },
+        {
+          "text": "I look forward to our next meeting, which is confirmed for next Tuesday.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "next Tuesday"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Loop in our solutions engineer",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "loop in our solutions engineer"
+          }
+        },
+        {
+          "text": "Check with procurement on approved vendors",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "check with procurement on approved vendors"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.8571428571428571,
+      "citationAccuracy": 1,
+      "groundednessScore": 86,
+      "ungroundedLines": [
+        6
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-011",
+      "company": "Aldergrove Retail",
+      "industry": "construction",
+      "dealStage": "evaluation",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Grace Kim",
+          "role": "Head of Customer Success",
+          "isNamed": true
+        },
+        {
+          "name": "Ben Whitfield",
+          "role": "VP Marketing",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "lack of real-time visibility",
+        "frequent stockouts",
+        "high employee turnover in ops"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "send updated pricing",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "test the sandbox with their team",
+          "isVague": false
+        },
+        {
+          "by": "rep",
+          "text": "set up a sandbox environment",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "who else needs to be looped in before signing",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "next Thursday afternoon"
+      },
+      "ambiguous": false,
+      "ambiguityKind": null
+    },
+    "followUp": {
+      "subject": "Follow-up: Aldergrove Retail & Next Steps",
+      "draftLines": [
+        {
+          "text": "Hi Grace and Ben,",
+          "citation": null
+        },
+        {
+          "text": "Thank you for taking the time to speak today regarding Aldergrove Retail.",
+          "citation": {
+            "field": "company",
+            "value": "Aldergrove Retail"
+          }
+        },
+        {
+          "text": "I am excited to assist you as you go through this evaluation.",
+          "citation": {
+            "field": "dealStage",
+            "value": "evaluation"
+          }
+        },
+        {
+          "text": "During our discussion, we reviewed how we can help resolve your lack of real-time visibility.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "lack of real-time visibility"
+          }
+        },
+        {
+          "text": "We also focused on solutions to prevent frequent stockouts.",
+          "citation": {
+            "field": "painPoints.1",
+            "value": "frequent stockouts"
+          }
+        },
+        {
+          "text": "Additionally, we touched on your goals to address high employee turnover in ops.",
+          "citation": {
+            "field": "painPoints.2",
+            "value": "high employee turnover in ops"
+          }
+        },
+        {
+          "text": "To ensure we are aligned, we still need to figure out who else needs to be looped in before signing.",
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "who else needs to be looped in before signing"
+          }
+        },
+        {
+          "text": "I look forward to our next call, which is confirmed for next Thursday afternoon.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "next Thursday afternoon"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Set up a sandbox environment",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "set up a sandbox environment"
+          }
+        },
+        {
+          "text": "Send updated pricing",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "send updated pricing"
+          }
+        },
+        {
+          "text": "Test the sandbox with their team",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "test the sandbox with their team"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.7777777777777778,
+      "citationAccuracy": 1,
+      "groundednessScore": 78,
+      "ungroundedLines": [
+        0,
+        8
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-012",
+      "company": "Pinnacle Biotech",
+      "industry": "finance",
+      "dealStage": "closed_won",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Tomas Reyes",
+          "role": "VP Marketing",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "slow customer onboarding",
+        "manual dispatch scheduling",
+        "duplicate data entry across tools"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "loop in our solutions engineer",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "confirm headcount for the pilot",
+          "isVague": false
+        },
+        {
+          "by": "rep",
+          "text": "set up a sandbox environment",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "whether the security review is already underway",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "in two weeks"
+      },
+      "ambiguous": false,
+      "ambiguityKind": null
+    },
+    "followUp": {
+      "subject": "Following up on our meeting",
+      "draftLines": [
+        {
+          "text": "Hi Tomas,",
+          "citation": {
+            "field": "contacts.0.name",
+            "value": "Tomas"
+          }
+        },
+        {
+          "text": "Thank you for taking the time to speak today regarding Pinnacle Biotech.",
+          "citation": {
+            "field": "company",
+            "value": "Pinnacle Biotech"
+          }
+        },
+        {
+          "text": "I understand that your team is currently facing challenges with slow customer onboarding.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "slow customer onboarding"
+          }
+        },
+        {
+          "text": "We also discussed the pain points around manual dispatch scheduling.",
+          "citation": {
+            "field": "painPoints.1",
+            "value": "manual dispatch scheduling"
+          }
+        },
+        {
+          "text": "Additionally, we touched on the difficulties of duplicate data entry across tools.",
+          "citation": {
+            "field": "painPoints.2",
+            "value": "duplicate data entry across tools"
+          }
+        },
+        {
+          "text": "I will keep you updated on our end, and we will look into whether the security review is already underway.",
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "whether the security review is already underway"
+          }
+        },
+        {
+          "text": "I look forward to our next meeting, which is scheduled for in two weeks.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "in two weeks"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "loop in our solutions engineer",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "loop in our solutions engineer"
+          }
+        },
+        {
+          "text": "confirm headcount for the pilot",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "confirm headcount for the pilot"
+          }
+        },
+        {
+          "text": "set up a sandbox environment",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "set up a sandbox environment"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.875,
+      "citationAccuracy": 1,
+      "groundednessScore": 88,
+      "ungroundedLines": [
+        7
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-013",
+      "company": "Fernwood Energy",
+      "industry": "insurance",
+      "dealStage": "evaluation",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Naomi Okafor",
+          "role": "VP Marketing",
+          "isNamed": true
+        },
+        {
+          "name": "Grace Kim",
+          "role": "Head of Security",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "duplicate data entry across tools",
+        "compliance reporting overhead"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "send the security questionnaire answers",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "confirm headcount for the pilot",
+          "isVague": false
+        },
+        {
+          "by": "rep",
+          "text": "draft a rollout timeline",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "whether legal needs a redline pass on the MSA",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "next Tuesday"
+      },
+      "ambiguous": false,
+      "ambiguityKind": null
+    },
+    "followUp": {
+      "subject": "Follow-up: Fernwood Energy Discussion",
+      "draftLines": [
+        {
+          "text": "Hi Naomi and Grace,",
+          "citation": null
+        },
+        {
+          "text": "Thank you for taking the time to talk today about Fernwood Energy.",
+          "citation": {
+            "field": "company",
+            "value": "Fernwood Energy"
+          }
+        },
+        {
+          "text": "As we move forward with this evaluation, I am excited about the prospect of working together.",
+          "citation": {
+            "field": "dealStage",
+            "value": "evaluation"
+          }
+        },
+        {
+          "text": "I took note of your pain points, particularly the duplicate data entry across tools.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "duplicate data entry across tools"
+          }
+        },
+        {
+          "text": "We also discussed solving the compliance reporting overhead that your team faces.",
+          "citation": {
+            "field": "painPoints.1",
+            "value": "compliance reporting overhead"
+          }
+        },
+        {
+          "text": "As a next step, we still have an open question regarding whether legal needs a redline pass on the MSA.",
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "whether legal needs a redline pass on the MSA"
+          }
+        },
+        {
+          "text": "We have successfully confirmed our next meeting for next Tuesday.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "next Tuesday"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "send the security questionnaire answers",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "send the security questionnaire answers"
+          }
+        },
+        {
+          "text": "confirm headcount for the pilot",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "confirm headcount for the pilot"
+          }
+        },
+        {
+          "text": "draft a rollout timeline",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "draft a rollout timeline"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.75,
+      "citationAccuracy": 1,
+      "groundednessScore": 75,
+      "ungroundedLines": [
+        0,
+        7
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-014",
+      "company": "Copperline Finance",
+      "industry": "healthcare",
+      "dealStage": "negotiation",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Ben Whitfield",
+          "role": "COO",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "frequent stockouts",
+        "lack of real-time visibility"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "draft a rollout timeline",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "check with procurement on approved vendors",
+          "isVague": false
+        },
+        {
+          "by": "rep",
+          "text": "share the SOC 2 report",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "how this integrates with their existing stack",
+          "resolved": false
+        },
+        {
+          "text": "what a phased rollout would look like",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "in ten days"
+      },
+      "ambiguous": false,
+      "ambiguityKind": null
+    },
+    "followUp": {
+      "subject": "Following up on our conversation with Copperline Finance",
+      "draftLines": [
+        {
+          "text": "Hi Ben,",
+          "citation": {
+            "field": "contacts.0.name",
+            "value": "Ben Whitfield"
+          }
+        },
+        {
+          "text": "Thank you for taking the time to speak today about Copperline Finance.",
+          "citation": {
+            "field": "company",
+            "value": "Copperline Finance"
+          }
+        },
+        {
+          "text": "We discussed addressing your challenges around frequent stockouts.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "frequent stockouts"
+          }
+        },
+        {
+          "text": "We also want to ensure we resolve the lack of real-time visibility you are facing.",
+          "citation": {
+            "field": "painPoints.1",
+            "value": "lack of real-time visibility"
+          }
+        },
+        {
+          "text": "To move forward, we still need to align on how this integrates with your existing stack.",
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "how this integrates with their existing stack"
+          }
+        },
+        {
+          "text": "We also need to clarify what a phased rollout would look like.",
+          "citation": {
+            "field": "openQuestions.1.text",
+            "value": "what a phased rollout would look like"
+          }
+        },
+        {
+          "text": "As for next steps, I will share the SOC 2 report.",
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "share the SOC 2 report"
+          }
+        },
+        {
+          "text": "I will also draft a rollout timeline.",
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "draft a rollout timeline"
+          }
+        },
+        {
+          "text": "On your end, you agreed to check with procurement on approved vendors.",
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "check with procurement on approved vendors"
+          }
+        },
+        {
+          "text": "I look forward to our next meeting, which is confirmed for in ten days.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "in ten days"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "draft a rollout timeline",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "draft a rollout timeline"
+          }
+        },
+        {
+          "text": "check with procurement on approved vendors",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "check with procurement on approved vendors"
+          }
+        },
+        {
+          "text": "share the SOC 2 report",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "share the SOC 2 report"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.9090909090909091,
+      "citationAccuracy": 1,
+      "groundednessScore": 91,
+      "ungroundedLines": [
+        10
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-015",
+      "company": "Driftwood Hospitality",
+      "industry": "logistics",
+      "dealStage": "qualification",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Ben Whitfield",
+          "role": "COO",
+          "isNamed": true
+        },
+        {
+          "name": "Derek Novak",
+          "role": "Head of IT",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "high employee turnover in ops"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "loop in our solutions engineer",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "confirm headcount for the pilot",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "how this integrates with their existing stack",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "the following Monday"
+      },
+      "ambiguous": false,
+      "ambiguityKind": null
+    },
+    "followUp": {
+      "subject": "Follow up: Driftwood Hospitality meeting",
+      "draftLines": [
+        {
+          "text": "Hi Ben and Derek,",
+          "citation": null
+        },
+        {
+          "text": "Thank you for the call today regarding Driftwood Hospitality.",
+          "citation": {
+            "field": "company",
+            "value": "Driftwood Hospitality"
+          }
+        },
+        {
+          "text": "We discussed your challenges around high employee turnover in ops.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "high employee turnover in ops"
+          }
+        },
+        {
+          "text": "I will make sure we address the open question on how this integrates with their existing stack.",
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "how this integrates with their existing stack"
+          }
+        },
+        {
+          "text": "I've also scheduled our next meeting for the following Monday.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "the following Monday"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Loop in our solutions engineer",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "loop in our solutions engineer"
+          }
+        },
+        {
+          "text": "Confirm headcount for the pilot",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "confirm headcount for the pilot"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.6666666666666666,
+      "citationAccuracy": 1,
+      "groundednessScore": 67,
+      "ungroundedLines": [
+        0,
+        5
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-016",
+      "company": "Anchorpoint Legal",
+      "industry": "telecom",
+      "dealStage": "negotiation",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Sofia Alvarez",
+          "role": "Director of Engineering",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "slow incident response times"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "send updated pricing",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "share their current vendor contract end date",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "what a phased rollout would look like",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "early next month"
+      },
+      "ambiguous": false,
+      "ambiguityKind": null
+    },
+    "followUp": {
+      "subject": "Following up on our Anchorpoint Legal discussion",
+      "draftLines": [
+        {
+          "text": "Hi Sofia Alvarez,",
+          "citation": {
+            "field": "contacts.0.name",
+            "value": "Sofia Alvarez"
+          }
+        },
+        {
+          "text": "Thank you for taking the time to discuss Anchorpoint Legal today.",
+          "citation": {
+            "field": "company",
+            "value": "Anchorpoint Legal"
+          }
+        },
+        {
+          "text": "I understand that your team is currently facing challenges with slow incident response times.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "slow incident response times"
+          }
+        },
+        {
+          "text": "As we move forward in the negotiation stage, I want to make sure we address all open items.",
+          "citation": {
+            "field": "dealStage",
+            "value": "negotiation"
+          }
+        },
+        {
+          "text": "Specifically, we still have an unresolved question regarding what a phased rollout would look like.",
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "what a phased rollout would look like"
+          }
+        },
+        {
+          "text": "As next steps, I will send updated pricing on our end.",
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "send updated pricing"
+          }
+        },
+        {
+          "text": "Additionally, please share your current vendor contract end date when you get a chance.",
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "share their current vendor contract end date"
+          }
+        },
+        {
+          "text": "I look forward to our next meeting, which is confirmed for early next month.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "early next month"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Send updated pricing",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "send updated pricing"
+          }
+        },
+        {
+          "text": "Share current vendor contract end date",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "share their current vendor contract end date"
+          }
+        },
+        {
+          "text": "Next meeting",
+          "owner": "unassigned",
+          "dueHint": "early next month",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "early next month"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.8888888888888888,
+      "citationAccuracy": 1,
+      "groundednessScore": 89,
+      "ungroundedLines": [
+        8
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-017",
+      "company": "Silverline Telecom",
+      "industry": "energy",
+      "dealStage": "qualification",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Owen Marsh",
+          "role": "VP Sales",
+          "isNamed": true
+        },
+        {
+          "name": "Elena Ruiz",
+          "role": "VP Marketing",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "manual dispatch scheduling",
+        "rising support ticket volume"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "share the SOC 2 report",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "get sign-off from legal",
+          "isVague": false
+        },
+        {
+          "by": "rep",
+          "text": "loop in our solutions engineer",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "in two weeks"
+      },
+      "ambiguous": false,
+      "ambiguityKind": null
+    },
+    "followUp": {
+      "subject": "Silverline Telecom Follow-up",
+      "draftLines": [
+        {
+          "text": "Dear Owen Marsh and Elena Ruiz,",
+          "citation": {
+            "field": "contacts.0.name",
+            "value": "Owen Marsh"
+          }
+        },
+        {
+          "text": "Thank you for taking the time to speak today regarding Silverline Telecom.",
+          "citation": {
+            "field": "company",
+            "value": "Silverline Telecom"
+          }
+        },
+        {
+          "text": "We discussed your challenges with manual dispatch scheduling.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "manual dispatch scheduling"
+          }
+        },
+        {
+          "text": "We also discussed your team's struggle with rising support ticket volume.",
+          "citation": {
+            "field": "painPoints.1",
+            "value": "rising support ticket volume"
+          }
+        },
+        {
+          "text": "As agreed, I will share the SOC 2 report with you.",
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "share the SOC 2 report"
+          }
+        },
+        {
+          "text": "Furthermore, I will loop in our solutions engineer to assist with the next steps.",
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "loop in our solutions engineer"
+          }
+        },
+        {
+          "text": "On your end, you mentioned you will get sign-off from legal.",
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "get sign-off from legal"
+          }
+        },
+        {
+          "text": "I look forward to our next sync, which is confirmed for in two weeks.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "in two weeks"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Share the SOC 2 report",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "share the SOC 2 report"
+          }
+        },
+        {
+          "text": "Loop in our solutions engineer",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.2.text",
+            "value": "loop in our solutions engineer"
+          }
+        },
+        {
+          "text": "Get sign-off from legal",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "get sign-off from legal"
+          }
+        },
+        {
+          "text": "Next meeting",
+          "owner": "unassigned",
+          "dueHint": "in two weeks",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "in two weeks"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.8888888888888888,
+      "citationAccuracy": 1,
+      "groundednessScore": 89,
+      "ungroundedLines": [
+        8
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-018",
+      "company": "Redwood Construction",
+      "industry": "manufacturing",
+      "dealStage": "negotiation",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Jordan Lee",
+          "role": "VP Sales",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "slow customer onboarding"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "share a case study from a similar account",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "confirm headcount for the pilot",
+          "isVague": false
+        },
+        {
+          "by": "rep",
+          "text": "share a case study from a similar account",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "next Tuesday"
+      },
+      "ambiguous": false,
+      "ambiguityKind": null
+    },
+    "followUp": {
+      "subject": "Next Steps: Redwood Construction",
+      "draftLines": [
+        {
+          "text": "Hi Jordan Lee,",
+          "citation": {
+            "field": "contacts.0.name",
+            "value": "Jordan Lee"
+          }
+        },
+        {
+          "text": "Thank you for taking the time to speak today regarding Redwood Construction.",
+          "citation": {
+            "field": "company",
+            "value": "Redwood Construction"
+          }
+        },
+        {
+          "text": "It was great to learn more about your business within the manufacturing sector.",
+          "citation": {
+            "field": "industry",
+            "value": "manufacturing"
+          }
+        },
+        {
+          "text": "I appreciate you sharing details about the challenges you are experiencing with slow customer onboarding.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "slow customer onboarding"
+          }
+        },
+        {
+          "text": "As we continue through the negotiation stage of our process, we want to ensure everything is aligned.",
+          "citation": {
+            "field": "dealStage",
+            "value": "negotiation"
+          }
+        },
+        {
+          "text": "I will make sure to share a case study from a similar account as promised.",
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "share a case study from a similar account"
+          }
+        },
+        {
+          "text": "Our next meeting is currently confirmed for next Tuesday.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "next Tuesday"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Share a case study from a similar account",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "share a case study from a similar account"
+          }
+        },
+        {
+          "text": "Confirm headcount for the pilot",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "confirm headcount for the pilot"
+          }
+        },
+        {
+          "text": "Meet again for our scheduled call",
+          "owner": "unassigned",
+          "dueHint": "next Tuesday",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "next Tuesday"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.875,
+      "citationAccuracy": 1,
+      "groundednessScore": 88,
+      "ungroundedLines": [
+        7
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-019",
+      "company": "Harborview Education",
+      "industry": "food & beverage",
+      "dealStage": "qualification",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Priya Patel",
+          "role": "Head of IT",
+          "isNamed": true
+        },
+        {
+          "name": "Jordan Lee",
+          "role": "Head of Security",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "slow customer onboarding"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "send the security questionnaire answers",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "test the sandbox with their team",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [
+        {
+          "text": "whether legal needs a redline pass on the MSA",
+          "resolved": false
+        }
+      ],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "in ten days"
+      },
+      "ambiguous": false,
+      "ambiguityKind": null
+    },
+    "followUp": {
+      "subject": "Follow-up: Harborview Education Discussion",
+      "draftLines": [
+        {
+          "text": "Hi Priya Patel and Jordan Lee,",
+          "citation": null
+        },
+        {
+          "text": "Thank you for the conversation today regarding Harborview Education.",
+          "citation": {
+            "field": "company",
+            "value": "Harborview Education"
+          }
+        },
+        {
+          "text": "We discussed your main challenge with slow customer onboarding and how we can support you.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "slow customer onboarding"
+          }
+        },
+        {
+          "text": "As we continue our alignment in the qualification phase, we have a couple of next steps to keep things moving.",
+          "citation": {
+            "field": "dealStage",
+            "value": "qualification"
+          }
+        },
+        {
+          "text": "We also noted an open question regarding whether legal needs a redline pass on the MSA.",
+          "citation": {
+            "field": "openQuestions.0.text",
+            "value": "whether legal needs a redline pass on the MSA"
+          }
+        },
+        {
+          "text": "I look forward to our next sync, which we confirmed will take place in ten days.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "in ten days"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "Send the security questionnaire answers",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "send the security questionnaire answers"
+          }
+        },
+        {
+          "text": "Test the sandbox with their team",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "test the sandbox with their team"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.7142857142857143,
+      "citationAccuracy": 1,
+      "groundednessScore": 71,
+      "ungroundedLines": [
+        0,
+        6
+      ],
+      "invalidCitations": []
+    }
+  },
+  {
+    "context": {
+      "id": "m-020",
+      "company": "Nightingale Devices",
+      "industry": "medical devices",
+      "dealStage": "negotiation",
+      "stageSignalsConflict": false,
+      "contacts": [
+        {
+          "name": "Priya Patel",
+          "role": "Director of Procurement",
+          "isNamed": true
+        }
+      ],
+      "painPoints": [
+        "frequent stockouts",
+        "long invoice reconciliation cycles",
+        "slow customer onboarding"
+      ],
+      "commitments": [
+        {
+          "by": "rep",
+          "text": "share the SOC 2 report",
+          "isVague": false
+        },
+        {
+          "by": "prospect",
+          "text": "check with procurement on approved vendors",
+          "isVague": false
+        }
+      ],
+      "openQuestions": [],
+      "nextMeeting": {
+        "confirmed": true,
+        "timeframe": "next Thursday afternoon"
+      },
+      "ambiguous": false,
+      "ambiguityKind": null
+    },
+    "followUp": {
+      "subject": "Follow-up: Nightingale Devices Discussion",
+      "draftLines": [
+        {
+          "text": "Hi Priya Patel,",
+          "citation": {
+            "field": "contacts.0.name",
+            "value": "Priya Patel"
+          }
+        },
+        {
+          "text": "Thank you for taking the time to discuss Nightingale Devices today.",
+          "citation": {
+            "field": "company",
+            "value": "Nightingale Devices"
+          }
+        },
+        {
+          "text": "We discussed your current challenges with frequent stockouts.",
+          "citation": {
+            "field": "painPoints.0",
+            "value": "frequent stockouts"
+          }
+        },
+        {
+          "text": "We also discussed your long invoice reconciliation cycles.",
+          "citation": {
+            "field": "painPoints.1",
+            "value": "long invoice reconciliation cycles"
+          }
+        },
+        {
+          "text": "Lastly, we touched on slow customer onboarding.",
+          "citation": {
+            "field": "painPoints.2",
+            "value": "slow customer onboarding"
+          }
+        },
+        {
+          "text": "As we are currently in the negotiation stage, I want to keep things moving.",
+          "citation": {
+            "field": "dealStage",
+            "value": "negotiation"
+          }
+        },
+        {
+          "text": "I have committed to share the SOC 2 report.",
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "share the SOC 2 report"
+          }
+        },
+        {
+          "text": "You mentioned that you will check with procurement on approved vendors.",
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "check with procurement on approved vendors"
+          }
+        },
+        {
+          "text": "Our next meeting is confirmed for next Thursday afternoon.",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "next Thursday afternoon"
+          }
+        },
+        {
+          "text": "Best regards,",
+          "citation": null
+        }
+      ],
+      "nextSteps": [
+        {
+          "text": "share the SOC 2 report",
+          "owner": "rep",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.0.text",
+            "value": "share the SOC 2 report"
+          }
+        },
+        {
+          "text": "check with procurement on approved vendors",
+          "owner": "prospect",
+          "dueHint": null,
+          "citation": {
+            "field": "commitments.1.text",
+            "value": "check with procurement on approved vendors"
+          }
+        },
+        {
+          "text": "Hold confirmed next meeting",
+          "owner": "unassigned",
+          "dueHint": "next Thursday afternoon",
+          "citation": {
+            "field": "nextMeeting.timeframe",
+            "value": "next Thursday afternoon"
+          }
+        }
+      ]
+    },
+    "grade": {
+      "citationCoverage": 0.9,
+      "citationAccuracy": 1,
+      "groundednessScore": 90,
+      "ungroundedLines": [
+        9
+      ],
+      "invalidCitations": []
+    }
+  }
+]
