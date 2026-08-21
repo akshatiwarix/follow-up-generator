@@ -13,13 +13,16 @@ import { buildPrompt } from "./prompt";
  * Called from scripts/generate-corpus.mts (once, at corpus-build time) and
  * from app/api/generate (live, for Try It Yourself).
  */
-export const GENERATION_MODEL_ID = "gemini-flash-latest";
+export const GENERATION_MODEL_ID = "gemini-3.5-flash";
 
 export async function generateFollowUp(context: MeetingContext): Promise<GeneratedFollowUp> {
   const { output } = await generateText({
     model: google(GENERATION_MODEL_ID),
     output: Output.object({ schema: generatedFollowUpSchema }),
     prompt: buildPrompt(context),
+    // The free tier occasionally returns a transient 503 ("high demand");
+    // the AI SDK's own backoff needs more room than its 2-retry default.
+    maxRetries: 5,
   });
   return output;
 }

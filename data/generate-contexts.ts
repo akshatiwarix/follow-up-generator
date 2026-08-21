@@ -3,7 +3,14 @@ import type { MeetingContext, AmbiguityKind, DealStage, CommitmentFact, ContactF
 import * as banks from "./banks";
 
 export const CORPUS_SEED = 20230923;
-export const CORPUS_SIZE = 50;
+/**
+ * Shrunk from an originally-planned 50 to 20: the free-tier Google API key
+ * this build ended up using caps every current-generation model at a flat
+ * 20 requests/day, confirmed live against both gemini-3.7-flash and
+ * gemini-3.6-flash. 20 meetings fits one day's quota; see PLAN.md's
+ * "Settled decisions" for the full story.
+ */
+export const CORPUS_SIZE = 20;
 
 export const AMBIGUITY_KINDS: readonly AmbiguityKind[] = [
   "missing_next_meeting",
@@ -12,7 +19,7 @@ export const AMBIGUITY_KINDS: readonly AmbiguityKind[] = [
   "unnamed_stakeholder",
   "unclear_deal_stage",
 ];
-export const AMBIGUOUS_COUNT = 20; // 4 of each kind, ~40% of CORPUS_SIZE
+export const AMBIGUOUS_COUNT = 8; // ~40% of CORPUS_SIZE, unevenly split across 5 kinds (2/2/2/1/1)
 
 const DEAL_STAGES: readonly DealStage[] = [
   "discovery",

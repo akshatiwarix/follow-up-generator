@@ -59,7 +59,7 @@ actually backed by those notes — not smoothed-over LLM confidence.
 
 ## User journey
 
-1. Land on the **Follow-Up Library** — 50 precomputed meetings, each already run
+1. Land on the **Follow-Up Library** — 20 precomputed meetings, each already run
    through the generator, each showing a groundedness score. A corpus-wide panel
    splits the average by clean vs. ambiguous meetings.
 2. Open a **meeting detail** page — meeting context on one side, the generated
@@ -75,9 +75,9 @@ actually backed by those notes — not smoothed-over LLM confidence.
 ## MVP scope
 
 **In:**
-- Standalone synthetic corpus of 50 "meeting context" records, ~40% flagged
+- Standalone synthetic corpus of 20 "meeting context" records, ~40% flagged
   ambiguous (one deliberate gap each).
-- One real LLM call per meeting (via Vercel AI Gateway), generating a structured
+- One real LLM call per meeting (direct to Google Generative AI), generating a structured
   follow-up draft + next-step summary + per-line citations, done once at corpus-build
   time and committed.
 - A pure, deterministic grounding validator that recomputes a groundedness score
@@ -105,7 +105,7 @@ convention (Day 001–021).
 
 ## Data sources / APIs
 
-- **Google Generative AI, direct** (`@ai-sdk/google`, model `gemini-flash-latest`)
+- **Google Generative AI, direct** (`@ai-sdk/google`, model `gemini-3.5-flash`)
   — the one live dependency. **Amended from the original plan of routing through
   the Vercel AI Gateway**: AI Gateway requires a credit card on file to service
   any request, even against its free monthly credits, and the user declined to
@@ -113,9 +113,14 @@ convention (Day 001–021).
   (https://aistudio.google.com/apikey) with a real free tier and no card
   required, so generation is wired straight to Google instead — same "one real
   LLM call, structured output, checked for groundedness" design, different
-  provider. Model is the Flash tier specifically: the free-tier key's Pro-tier
-  quota is 0 requests (confirmed by a live 429 against `gemini-3.1-pro` before
-  switching), while Flash carries real free-tier quota. Used in two places:
+  provider. Pro tier is unusable on this key (0 free-tier quota, confirmed by a
+  live 429 against `gemini-3.1-pro`); every current-generation Flash model
+  turned out to carry a flat 20-requests/day cap regardless of specific
+  version (confirmed live against `gemini-3.7-flash` and `gemini-3.6-flash`),
+  which is what drove the corpus size down from 50 to 20 (see § Settled
+  decisions). `gemini-3.5-flash` is used because it's a separate quota
+  bucket from the two already exhausted for the day, not for any quality
+  reason. Used in two places:
   1. `scripts/generate-corpus.mts` — one-time, local, generates the committed
      follow-up corpus. Needs `GOOGLE_GENERATIVE_AI_API_KEY` locally when run.
   2. `app/api/generate` (Try It Yourself) — live, per-request. Needs the same
@@ -148,7 +153,7 @@ app/                      three screens + /api/v1/follow-ups + /api/schema + /ap
 - `lib/grounding/` is pure and deterministic: same `(MeetingContext,
   GeneratedFollowUp)` pair ⇒ byte-identical `FollowUpGrade`. No network, no
   randomness. Checked by a sweep invariant (recompute matches the committed grade).
-- `lib/generation/` is the **only** module that talks to the AI Gateway. It is not
+- `lib/generation/` is the **only** module that talks to the model provider. It is not
   required to be deterministic — it wraps a real model call — and is exercised at
   corpus-build time and by `/api/generate`, never imported by `lib/grounding/`.
 - The Library and meeting detail pages read the precomputed, committed corpus only
@@ -249,7 +254,7 @@ structured output at generation time and the committed corpus at load time.
 
 - Seeded RNG (mulberry32-style, no crypto, no `Math.random()`), fixed seed
   committed in source — same reproducibility guarantee as Day 021.
-- 50 `MeetingContext` records. ~40% (20) flagged `ambiguous`, one deliberate
+- 20 `MeetingContext` records. ~40% (8) flagged `ambiguous`, one deliberate
   `ambiguityKind` each (4 of each of the 5 kinds), the remaining 30 clean.
 - Small fixed banks (company names, industries, roles, pain-point phrases,
   objection phrases) combined by the seeded RNG — enough variety to be readable,
@@ -269,9 +274,9 @@ structured output at generation time and the committed corpus at load time.
   `OpenQuestion`, a `CommitmentFact` with `isVague: true`), state that gap plainly
   instead of inventing a specific — this instruction is the whole point of the
   repo and is verified, not trusted (see Grounding below).
-- `scripts/generate-corpus.mts` runs this once over all 50 contexts and writes the
+- `scripts/generate-corpus.mts` runs this once over all 20 contexts and writes the
   committed `data/follow-up-corpus.json` (context + followUp + grade per entry).
-  Requires an AI Gateway credential locally when run; not required at app runtime
+  Requires GOOGLE_GENERATIVE_AI_API_KEY locally when run; not required at app runtime
   for the Library/detail pages, since they read the committed file.
 
 ### Grounding (`lib/grounding/`)
@@ -318,7 +323,7 @@ structured output at generation time and the committed corpus at load time.
 ## Implementation task order
 
 1. Scaffold Next.js app (App Router, TS strict, Tailwind 4, ESLint flat config),
-   matching Day 021's `package.json` script set plus `ai` / AI Gateway deps.
+   matching Day 021's `package.json` script set plus `ai` / `@ai-sdk/google` deps.
 2. `lib/domain/` — all types + zod schemas above.
 3. `data/generate-contexts.ts` + seeded RNG — deterministic `MeetingContext[]`,
    committed as part of build (or generated into the same corpus file as step 5).
@@ -326,7 +331,7 @@ structured output at generation time and the committed corpus at load time.
 5. `lib/grounding/` — `gradeFollowUp`, pure and tested first (TDD: write the
    grading tests against hand-built fixture context/followUp pairs before wiring
    generation).
-6. `scripts/generate-corpus.mts` — run generation over all 50 contexts, grade
+6. `scripts/generate-corpus.mts` — run generation over all 20 contexts, grade
    each, write committed `data/follow-up-corpus.json`.
 7. `lib/follow-up/` — corpus loader + `CorpusGroundedness` aggregation.
 8. API routes: `/api/v1/follow-ups`, `/api/v1/follow-ups/[id]`, `/api/schema`,
@@ -347,8 +352,8 @@ structured output at generation time and the committed corpus at load time.
 
 `npm test` (vitest):
 - `lib/domain/*.test.ts` — schema validation, edge cases.
-- `data/generate-contexts.test.ts` — corpus size, ambiguity mix (exactly 20/50,
-  4 per `ambiguityKind`), determinism (two generations from the same seed are
+- `data/generate-contexts.test.ts` — corpus size, ambiguity mix (exactly 8/20,
+  every `ambiguityKind` represented), determinism (two generations from the same seed are
   byte-identical).
 - `lib/grounding/*.test.ts` — hand-built fixtures: a fully-grounded draft (100
   score), a fully-ungrounded draft (0 score), a partially-invalid-citation draft,
@@ -356,8 +361,8 @@ structured output at generation time and the committed corpus at load time.
 - `lib/follow-up/*.test.ts` — aggregation math.
 
 `npm run sweep` (`scripts/sweep.mts`), over the committed corpus:
-1. Corpus size is 50.
-2. Ambiguity mix: exactly 20 ambiguous, 4 of each `ambiguityKind`.
+1. Corpus size is 20.
+2. Ambiguity mix: exactly 8 ambiguous, every `ambiguityKind` represented at least once.
 3. Every `GeneratedFollowUp` validates against its zod schema.
 4. Grading reproducibility: recomputing `gradeFollowUp(context, followUp)` for
    every committed entry matches the committed `grade` byte-for-byte.
@@ -416,7 +421,7 @@ screenshots — mirroring how Day 021's README proved its accuracy claim.
 1. Cut Try It Yourself first (Library + detail alone still prove the concept).
 2. Cut the corpus-wide clean/ambiguous split in the UI panel (keep the overall
    number only).
-3. Reduce corpus from 50 to 20 meetings (keep the 40% ambiguity ratio).
+3. ~~Reduce corpus from 50 to 20 meetings (keep the 40% ambiguity ratio).~~ **Applied** — see § Settled decisions; this cut was invoked earlier than expected, by a quota wall rather than running out of day.
 4. Never cut: the grounding validator, the zero-fabrication sweep invariant, or
    citations in the UI — those are the entire point of the repo.
 
@@ -437,18 +442,28 @@ Recap of the grilling session that produced this plan, for traceability:
 - Real LLM call for generation — the first day in the series to break the
   zero-live-dependency streak, deliberately, because "grounded generation" is
   the point of the brief. Originally scoped as Vercel AI Gateway with a
-  Sonnet-class model; amended mid-build to Google's `gemini-flash-latest` via
-  the direct `@ai-sdk/google` provider, because AI Gateway requires a credit
-  card on file even for free-tier usage and the user opted for Google AI
-  Studio's card-free free tier instead — whose free quota only covers the
-  Flash tier, not Pro (see § Data sources / APIs).
+  Sonnet-class model; amended mid-build to Google's Flash tier via the direct
+  `@ai-sdk/google` provider, because AI Gateway requires a credit card on file
+  even for free-tier usage and the user opted for Google AI Studio's
+  card-free free tier instead — whose free quota only covers Flash, not Pro
+  (see § Data sources / APIs).
+- Corpus size amended from 50 to 20 meetings (8 ambiguous / 12 clean, still
+  ~40%), mid-build: the free-tier key caps every current-generation Flash
+  model at a flat 20 requests/day (confirmed live on `gemini-3.7-flash` and
+  `gemini-3.6-flash` in turn), so 20 meetings is what one day's quota
+  actually buys. This is the corpus-size cut from § Cut order, just invoked
+  by a quota wall instead of running out of day. `scripts/generate-corpus.mts`
+  was hardened alongside this: it now compares a cached entry's full context
+  content (not just its id) before reusing it, so a corpus-shape change like
+  this one can't silently pair a stale followUp/grade with a differently-
+  shaped context that happens to share an id.
 - Standalone synthetic corpus, no cross-repo import from Day 021.
 - Output = follow-up draft + separate structured next-step summary (both named
   explicitly in the brief).
 - Draft is external/prospect-facing; next-step summary is the internal-facing
   artifact.
 - One-day time limit, standard for the series.
-- Stack unchanged from series convention plus the AI SDK/Gateway addition.
+- Stack unchanged from series convention plus the AI SDK addition.
 - Groundedness verified via required structured per-line citations, not a
   post-hoc string search or blind trust — validated against the source context,
   scored as coverage × accuracy, corpus-split clean vs. ambiguous like Day 021.
